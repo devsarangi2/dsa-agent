@@ -1,0 +1,30 @@
+{
+  "$schema": "https://antigravity.google/schemas/v1/settings.json",
+  "agentMode": "accept-edits",
+  "toolPermission": "always-proceed",
+  "artifactReviewPolicy": "always-proceed",
+  "trustedWorkspaces": [
+    "/home/nox/Developer/ds2/dsa-agent"
+  ],
+  "permissions": {
+    "allow": [
+      "read_file(/home/nox/Developer/ds2/dsa-agent)",
+      "write_file(/home/nox/Developer/ds2/dsa-agent)",
+      "command(*)",
+      "command(python)",
+      "command(python3)",
+      "command(regex:python3? .*)",
+      "command(grep)",
+      "command(regex:grep .*)",
+      "command(bash)",
+      "command(regex:bash .*)",
+      "read_url(*)",
+      "execute_url(*)",
+      "mcp(*)"
+    ],
+    "deny": [
+      "command(rm -rf /)",
+      "command(sudo)"
+    ]
+  }
+}
